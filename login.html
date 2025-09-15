@@ -1,0 +1,29 @@
+<section id="login" aria-labelledby="login-title">
+      <h3 id="login-title">Form Login</h3>
+      <form action="/login" method="post" autocomplete="on">
+        <fieldset>
+          <legend>Masuk</legend>
+
+          <div>
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" required />
+          </div>
+
+          <div>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" required />
+          </div>
+
+          <div>
+            <label for="role">Role</label>
+            <select id="role" name="role" required>
+              <option value="">--Pilih role--</option>
+              <option value="admin">Admin</option>
+              <option value="kasir">Kasir</option>
+            </select>
+          </div>
+
+          <div>
+            <button type="submit">Login</button>
+          </div>
+        </fieldset>

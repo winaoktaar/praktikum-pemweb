@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sistem Informasi Data Apotik</title>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <table border="1" width="100%" cellpadding="5">
+      <tr>
+        <td align="center">
+          <h1>Sistem Informasi Data Apotik</h1>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <table border="1" cellpadding="5">
+            <tr>
+              <td><a href="#home">Beranda</a></td>
+              <td><a href="#about">Tentang</a></td>
+              <td><a href="#features">Fitur</a></td>
+              <td><a href="data.html">Data</a></td>
+              <td><a href="login.html">Login</a></td>
+              <td><a href="#contact">Kontak</a></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </header>
+
+  <main>
+    <!-- Data overview -->
+    <section id="data-overview" aria-labelledby="data-title">
+      <table border="1" width="100%" cellpadding="10">
+        <tr>
+          <td colspan="2" align="center">
+            <article>
+            <h3 id="data-title">Deskripsi Tentang Web Sistem Informasi Data Apotek</h3>
+            </article>
+        </td>
+        </tr>
+        <tr>
+          <!-- Kolom kiri: gambar -->
+          <td width="30%" align="center">
+            <img src="GAMBAR APOTEK.jpeg" alt="Gambar Apotek" width="200">
+          </td>
+          <!-- Kolom kanan: teks -->
+          <td width="70%">
+            <p>
+              Aplikasi web <b>Sistem Informasi Apotek</b> adalah sebuah sistem berbasis website 
+              yang dirancang untuk membantu pengelolaan data obat, supplier, serta transaksi 
+              penjualan di apotek. 
+            </p>
+            <p>
+              Melalui aplikasi ini, <b>admin</b> dan <b>kasir</b> dapat melakukan login sesuai peran masing-masing, 
+              kemudian mengelola data obat, mencatat transaksi penjualan, dan memantau stok secara lebih efisien. 
+              Sistem ini juga meminimalisir kesalahan pencatatan manual dan mempercepat pelayanan kepada pelanggan.
+            </p>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Kontak -->
+    <section id="contact" aria-labelledby="contact-title">
+      <table border="1" width="100%" cellpadding="10">
+        <tr>
+          <td>
+            <h3 id="contact-title">Kontak</h3>
+            <address>
+              <p>Apotek Amanah<br/>Jl. ninajhadlu No.127 A<br/>Telepon: 0831-xxxx-xxxx</p>
+            </address>
+            <form action="/contact" method="post">
+              <table border="0" cellpadding="5">
+                <tr>
+                  <td><label for="name">Nama</label></td>
+                  <td><input id="name" name="name" type="text" /></td>
+                </tr>
+                <tr>
+                  <td><label for="message">Pesan</label></td>
+                  <td><textarea id="message" name="message" rows="4"></textarea></td>
+                </tr>
+                <tr>
+                  <td colspan="2" align="center">
+                    <button type="submit">Kirim</button>
+                  </td>
+                </tr>
+              </table>
+            </form>
+          </td>
+        </tr>
+      </table>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <table border="1" width="100%" cellpadding="10">
+      <tr>
+        <td>
+          <h3 id="about-title">Tentang Sistem</h3>
+          <p>
+            Ini adalah sistem informasi sederhana untuk mengelola data apotik: pengguna (admin & kasir), 
+            daftar obat, dan supplier.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <p>https://www.kimiafarma.co.id/id/kimia-farma-apotek</p>
+        </td>
+      </tr>
+    </table>
+  </footer>
+</body>
+</html>
