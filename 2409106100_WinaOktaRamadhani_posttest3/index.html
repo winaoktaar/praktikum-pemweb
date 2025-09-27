@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="id">
+<div class="hero-header">
+  <a class="brand" href="index.html" aria-label="Beranda Apotek Amanah">
+    <img src="LOGO.png" width="56" height="56">
+  </a>
+  <h2 id="home-title">Selamat datang di Sistem Informasi Data Apotek</h2>
+</div>
+  <div class="running-text" style="position:relative; overflow:hidden; background:#eef7ff; border-radius:8px; padding:10px 6px; border:1px solid rgba(10,50,90,0.06);">
+    <div class="rt-track" style="display:inline-block; white-space:nowrap; will-change:transform; animation: rt-scroll 18s linear infinite;">
+      Aplikasi web <b>Sistem Informasi Apotek</b> membantu pengelolaan data obat, supplier, dan transaksi penjualan di apotek. 
+      &nbsp;&nbsp;•&nbsp;&nbsp;
+      Melalui aplikasi ini, <b>admin</b> dan <b>kasir</b> dapat melakukan login sesuai peran, mengelola data obat, dan memantau stok. 
+      &nbsp;&nbsp;•&nbsp;&nbsp;
+    </div>
+  </div>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>html { scroll-behavior: smooth; }</style>
+</head>
+
+<body>
+    <header>
+    <nav aria-label="Main navigation" style="text-align:center; padding:12px 0;">
+      <a href="#home">Beranda</a> |
+      <a href="#about">Tentang</a> |
+      <a href="#features">Fitur</a> |
+      <a href="data.html">Data</a> |
+      <a href="login.html">Login</a> |
+      <a href="#contact">Kontak</a>
+    </nav>
+    <button id="darkModeToggle" style="margin-top:10px; padding:6px 12px; border-radius:6px; cursor:pointer;">
+  🌙 Dark Mode
+</button>
+
+  </header>
+
+  <main>
+      <div style="display:flex; gap:18px; flex-wrap:wrap; align-items:center; margin-top:18px;">
+        <div style="flex:1; min-width:240px;">
+          <img src="GAMBAR APOTEK.jpeg" alt="Gambar Apotek" style="max-width:80%; border: radius 8px;">
+        </div>
+        <div class="system-features">
+          <h3>Apa yang bisa dilakukan sistem ini?</h3>
+          <ul>
+            <li>Kelola daftar obat <span>(tambah, edit, dan lihat data)</span></li>
+            <li>Kelola supplier</li>
+            <li>Mencatat transaksi penjualan <span>(kasir)</span></li>
+            <li>Memantau stok obat</li>
+          </ul>
+          <p>
+            Untuk melihat data obat, klik tombol di bawah:
+          </p>
+          <a href="#" class="btn-link">Lihat Data Obat →</a>
+        </div>
+
+    <section id="about" aria-labelledby="about-title" class="about-section">
+  <div class="about-card">
+    <h3 id="about-title">Tentang Sistem</h3>
+    <p>
+      Sistem ini dibuat untuk mempermudah pengelolaan operasional apotek kecil hingga menengah: 
+      dari penyimpanan data obat, supplier, sampai pencatatan penjualan. 
+      Sistem mendukung dua peran: <b>admin</b> (manajemen data) dan <b>kasir</b> (transaksi).
+    </p>
+
+    <h4>Manfaat Utama</h4>
+    <ul class="benefit-list">
+      <li>Mempercepat pencatatan transaksi</li>
+      <li>Meminimalkan stok kosong karena ada monitoring</li>
+      <li>Mengurangi kesalahan saat penjualan</li>
+    </ul>
+  </div>
+</section>
+
+
+    <section id="features" aria-labelledby="features-title" style="padding:28px 16px;">
+      <div style="max-width:980px; margin:0 auto;">
+        <h2 id="features-title">Fitur</h2>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:12px;">
+          <article class="card">
+            <h3>Manajemen Obat</h3>
+            <p>Tambah, hapus, dan lihat data obat (nama, kode, stok, harga, supplier).</p>
+          </article>
+
+          <article class="card">
+            <h3>Manajemen Supplier</h3>
+            <p>Simpan informasi supplier untuk pembelian dan pengisian stok.</p>
+          </article>
+
+          <article class="card">
+            <h3>Transaksi Penjualan</h3>
+            <p>Kasir dapat mencatat penjualan dan melihat total transaksi.</p>
+          </article>
+
+          <article class="card">
+            <h3>Laporan Sederhana</h3>
+            <p>Ringkasan stok & penjualan untuk membantu pengambilan keputusan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title" style="background:#f7fbff; padding:28px 16px;">
+      <div style="max-width:980px; margin:0 auto;">
+        <h2 id="contact-title">Kontak</h2>
+        <address>
+          <p>Apotek Amanah<br/>Jl. ninajhadlu No.127 A<br/>Telepon: 0831-2535-4891</p>
+        </address>
+      </div>
+    </section>
+  </main>
+
+  <footer style="text-align:center; padding:18px 8px;">
+    <p>© 2025 Sistem Informasi Data Apotek</p>
+    <p><a href="https://www.kimiafarma.co.id/id/kimia-farma-apotek" target="_blank" rel="noreferrer noopener">kimiafarma.co.id</a></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

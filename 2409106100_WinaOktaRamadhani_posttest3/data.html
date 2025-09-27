@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Data Obat — Apotek</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>html{scroll-behavior:smooth} table{width:100%; border-collapse:collapse}</style>
+</head>
+<body>
+  <header style="padding:12px; text-align:center;">
+    <a href="index.html">← Kembali ke Beranda</a> | <a href="login.html">Login</a>
+  </header>
+
+  <main style="max-width:980px; margin:16px auto; padding:0 12px;">
+    <h2>Data Obat</h2>
+    <p>Daftar obat yang tersimpan (contoh). Kamu bisa menambah baris lewat form di bawah (perubahan bersifat lokal di browser).</p>
+
+    <table border="1" cellpadding="8" id="obat-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Kode</th>
+          <th>Nama Obat</th>
+          <th>Supplier</th>
+          <th>Stok</th>
+          <th>Harga (Rp)</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td><td>OBT-001</td><td>Paracetamol 500mg</td><td>PT. Sehat</td><td>120</td><td>1200</td>
+          <td><button class="delete-btn">Hapus</button></td>
+        </tr>
+        <tr>
+          <td>2</td><td>OBT-002</td><td>Amoxicillin 500mg</td><td>CV. Medika</td><td>40</td><td>4500</td>
+          <td><button class="delete-btn">Hapus</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr style="margin:18px 0;">
+
+    <h3>Tambah Obat (demo lokal)</h3>
+    <form id="add-form">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:8px;">
+        <input type="text" id="kode" placeholder="Kode (contoh OBT-003)" required>
+        <input type="text" id="nama" placeholder="Nama Obat" required>
+        <input type="text" id="supplier" placeholder="Supplier" required>
+        <input type="number" id="stok" placeholder="Stok" min="0" value="0" required>
+        <input type="number" id="harga" placeholder="Harga (Rp)" min="0" value="0" required>
+      </div>
+      <p style="margin-top:8px;">
+        <button type="submit">Tambah Obat</button>
+      </p>
+    </form>
+  </main>
+
+  <script>
+    (function(){
+      const form = document.getElementById('add-form');
+      const tableBody = document.querySelector('#obat-table tbody');
+
+      function refreshIndexes(){
+        const rows = tableBody.querySelectorAll('tr');
+        rows.forEach((r,i) => {
+          r.querySelector('td').textContent = i+1;
+        });
+      }
+
+      tableBody.addEventListener('click', function(e){
+        if(e.target.classList.contains('delete-btn')){
+          const row = e.target.closest('tr');
+          row.remove();
+          refreshIndexes();
+        }
+      });
+
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const kode = document.getElementById('kode').value.trim();
+        const nama = document.getElementById('nama').value.trim();
+        const supplier = document.getElementById('supplier').value.trim();
+        const stok = document.getElementById('stok').value;
+        const harga = document.getElementById('harga').value;
+
+        if(!kode || !nama){
+          alert('Isi kode dan nama obat dulu ya.');
+          return;
+        }
+
+        const newRow = document.createElement('tr');
+        newRow.innerHTML = `
+          <td>0</td>
+          <td>${kode}</td>
+          <td>${nama}</td>
+          <td>${supplier}</td>
+          <td>${stok}</td>
+          <td>${harga}</td>
+          <td><button class="delete-btn">Hapus</button></td>
+        `;
+        tableBody.appendChild(newRow);
+        refreshIndexes();
+
+        // clear form
+        form.reset();
+        document.getElementById('stok').value = 0;
+        document.getElementById('harga').value = 0;
+      });
+
+      refreshIndexes();
+    })();
+  </script>
+</body>
+</html>
